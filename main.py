@@ -1,7 +1,7 @@
 from selenium.webdriver import Chrome
 from selenium.webdriver.support.ui import WebDriverWait
 
-from helpers.helper import to_jobs_page, find_and_apply
+from helpers import to_jobs_page, find_and_apply
 
 
 if __name__ == "__main__":

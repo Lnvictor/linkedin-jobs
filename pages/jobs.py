@@ -50,8 +50,6 @@ class LinkedinJobs:
         sleep(2)
         self.__init__(self.driver, self.wait)
         for job in self.jobs:
-            # TODO: Resolver problema do click em vagas
-            import ipdb;ipdb.sset_trace()
             job.click()
             try:
                 apply_button = self.wait.until(

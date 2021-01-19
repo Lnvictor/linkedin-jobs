@@ -1,7 +1,6 @@
 from decouple import config
 
-from pages.jobs import LinkedinJobs
-from pages.login import Login
+from pages import LinkedinJobs, Login
 
 credentials = {
     "username": config("username"),
@@ -12,7 +11,6 @@ credentials = {
 def to_jobs_page(driver, wait):
     """walks from linkedin initial page to jobs page """
     driver.get("https://www.linkedin.com/")
-    import ipdb; ipdb.sset_trace()
     Login(driver, wait).login(credentials["username"], credentials["password"])
     options = wait.until(
         lambda driver: driver.find_elements_by_class_name("global-nav__primary-item")
