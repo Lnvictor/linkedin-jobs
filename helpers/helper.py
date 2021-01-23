@@ -10,6 +10,7 @@ credentials = {
 
 def to_jobs_page(driver, wait):
     """walks from linkedin initial page to jobs page """
+    
     driver.get("https://www.linkedin.com/")
     Login(driver, wait).login(credentials["username"], credentials["password"])
     options = wait.until(
